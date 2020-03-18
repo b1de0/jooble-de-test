@@ -4,8 +4,8 @@ COPY requirements.txt /etc/
 
 RUN pip install --no-cache-dir -r /etc/requirements.txt
 
-WORKDIR /src
+WORKDIR /app
 
-COPY src /src
+COPY app /app
 
 CMD ["python", "-u", "main.py"]

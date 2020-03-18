@@ -1,0 +1,17 @@
+version: "3.4"
+services:
+  jooble:
+    restart: always
+    container_name: jooble
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    networks:
+      - jooble_net
+
+networks:
+  jooble_net:
+    driver: "bridge"
