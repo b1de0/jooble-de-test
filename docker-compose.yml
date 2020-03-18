@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   jooble:
-    restart: always
+    restart: "no"
     container_name: jooble
     build:
       context: .
@@ -9,6 +9,7 @@ services:
     volumes:
       - ./data:/app/data
       - ./output:/app/output
+      - ./logs:/app/logs
     networks:
       - jooble_net
 
