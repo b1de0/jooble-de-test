@@ -1,0 +1,5 @@
+2020-03-19 19:01:24.353 | INFO     | __main__:processing:16 - Reading data.
+2020-03-19 19:01:24.649 | INFO     | __main__:processing:19 - Done parsing data.
+2020-03-19 19:01:24.859 | INFO     | __main__:processing:23 - z_score - done.
+2020-03-19 19:01:24.866 | INFO     | __main__:processing:25 - max_feature_set_index - done
+2020-03-19 19:01:24.877 | INFO     | __main__:processing:27 - max_feature_set_abs_mean_diff - done
