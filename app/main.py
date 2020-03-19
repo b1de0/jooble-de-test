@@ -26,7 +26,7 @@ def processing():
         max_feature_set_abs_mean_diff(df_input=test_data, df_output=test_output, feature_set=feature_set)
         logger.info('max_feature_set_abs_mean_diff - done')
 
-    test_output.to_csv("output/test.csv", index=False)
+    test_output.to_csv(OUTPUT_FILE, index=False, sep='\t')
 
     return True
 

@@ -8,6 +8,3 @@
 *.iml
 out
 gen
-logs/*
-output/*
-
