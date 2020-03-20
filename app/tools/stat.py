@@ -34,8 +34,9 @@ class ZScore(BaseTransformer):
         tmp = self.get_temp_data(df, feature_set)
         new_column_names = self.get_column_names(df, feature_set)
 
-        tmp -= tmp.mean(axis=0)
-        tmp /= tmp.std(axis=0)
+        mu = tmp.mean(axis=0)
+        sigma = tmp.std(axis=0)
+        tmp = (tmp - mu) / sigma
 
         tmp.rename(columns=new_column_names, inplace=True)
         return tmp
