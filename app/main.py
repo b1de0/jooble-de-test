@@ -1,21 +1,25 @@
 import sys
+import multiprocessing as mp
+
 import pandas as pd
 from loguru import logger
 from tools import parsing_data, ZScore, MaxFeatureSetIndex, MaxFeatureSetAbsMeanDiff
+from dask.distributed import Client
+
 
 logfile = "logs/running_process.log"
 logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="DEBUG")
 logger.add(logfile)
 
-TRAIN_DATA_DIR = "data/train.tsv"
-TEST_DATA_DIR = "data/test.tsv"
+TRAIN_DATA_PATH = "data/train.tsv"
+TEST_DATA_PATH = "data/test.tsv"
 OUTPUT_FILE = "output/test_proc.tsv"
 
 
 def processing():
     logger.info('Reading data.')
-    train_data, train_feature_set_list = parsing_data(TRAIN_DATA_DIR)
-    test_data, test_feature_set_list = parsing_data(TEST_DATA_DIR)
+    train_data, train_feature_set_list = parsing_data(TRAIN_DATA_PATH)
+    test_data, test_feature_set_list = parsing_data(TEST_DATA_PATH)
     logger.info('Done parsing data.')
     test_output = test_data['id_job']
 
@@ -43,4 +47,5 @@ def processing():
 
 
 if __name__ == '__main__':
+    client = Client(n_workers=mp.cpu_count(), threads_per_worker=2, memory_limit='500MB')
     processing()

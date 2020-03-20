@@ -1,5 +1,6 @@
 from typing import List
 import pandas as pd
+import dask.dataframe as dd
 
 
 class BaseTransformer:
