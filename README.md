@@ -3,6 +3,11 @@ Jooble employment test solution for Data Engineer.
 
 Using Dask is justified only in case of a large amount of data (number of files, file size).
 
+# Structure 
+app/tools/parsing.py - for read and prepare data
+app/tools/stat.py - transformers for data
+app/main.py - run all process
+
 # Releases
 v1.0 - Simple pandas, functions for processing
 
