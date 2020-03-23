@@ -41,7 +41,7 @@ def processing():
                                                      feature_set_list=test_feature_set_list)
     logger.info('max_feature_set_abs_mean_diff - done')
 
-    dd.to_csv(df=test_output, filename=OUTPUT_PATH, index=False, header=True, float_format='%.6f', sep='\t')
+    dd.to_csv(df=test_output, filename=OUTPUT_PATH, index=False, header=True, float_format='%.10f', sep='\t')
     logger.info('saving output - done')
     return True
 

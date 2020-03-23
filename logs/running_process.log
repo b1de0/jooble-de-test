@@ -11,3 +11,11 @@
 2020-03-23 09:37:29.027 | INFO     | __main__:processing:36 - max_feature_set_index - done
 2020-03-23 09:38:30.081 | INFO     | __main__:processing:42 - max_feature_set_abs_mean_diff - done
 2020-03-23 09:39:05.435 | INFO     | __main__:processing:45 - saving output - done
+2020-03-23 09:45:51.639 | INFO     | __main__:<module>:50 - ******************************
+2020-03-23 09:45:53.519 | INFO     | __main__:<module>:52 - client - {'tcp://127.0.0.1:37441': 2, 'tcp://127.0.0.1:40211': 2}
+2020-03-23 09:45:53.521 | INFO     | __main__:processing:20 - Reading data.
+2020-03-23 09:46:07.838 | INFO     | __main__:processing:23 - Done parsing data.
+2020-03-23 09:46:09.209 | INFO     | __main__:processing:30 - z_score - done.
+2020-03-23 09:46:09.361 | INFO     | __main__:processing:36 - max_feature_set_index - done
+2020-03-23 09:47:35.165 | INFO     | __main__:processing:42 - max_feature_set_abs_mean_diff - done
+2020-03-23 09:48:10.051 | INFO     | __main__:processing:45 - saving output - done
