@@ -15,7 +15,7 @@ services:
 
   #scheduler:
   #  build:
-  #    context: ./base
+  #    context: .
   #    dockerfile: Dockerfile
   #  image: daskdev/dask
   #  hostname: dask-scheduler
@@ -28,7 +28,7 @@ services:
   #
   #worker:
   #  build:
-  #    context: ./base
+  #    context: .
   #    dockerfile: Dockerfile
   #  image: daskdev/dask
   #  hostname: dask-worker
